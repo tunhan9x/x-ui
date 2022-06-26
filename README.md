@@ -112,29 +112,31 @@ docker build -t x-ui .
 - 输入域名时需为二级域名，不可带`www`
 - 本脚本申请证书均为泛域名证书
 
-## Tg机器人使用
+## Telegram bot使用
 
 > 此功能与教程由[FranzKafkaYu](https://github.com/FranzKafkaYu)提供
 
-X-UI支持通过Tg机器人实现每日流量通知，面板登录提醒以及cmd控制等功能，使用Tg机器人，需要自行申请  
+X-UI支持通过Telegram bot实现每日流量通知，面板登录提醒以及cmd控制等功能，使用Telegram bot，需要自行申请  
 具体申请教程可以参考[博客链接](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)  
 使用说明:在面板后台设置机器人相关参数，具体包括
 
 - Tg机器人Token
 - Tg机器人ChatId
-- Tg机器人周期运行时间，采用crontab语法  
+- Tg机器人周期运行时间，可使用用crontab语法  
 
 参考语法：
 - 30 * * * * * //每一分的第30s进行通知
 - @hourly      //每小时通知
 - @daily       //每天通知（凌晨零点整）
-- @every 8h    //每8小时通知  
+- @every 8h    //每8小时通知 
+- @every 30s   //每30s通知一次
 
 TG通知内容：
 - 节点流量使用
 - 面板登录提醒
 - 节点到期提醒
 - 流量预警提醒  
+- SSH登录提醒
 
 Command内容：  
 
