@@ -122,7 +122,7 @@ X-UI支持通过Telegram bot实现每日流量通知，面板登录提醒以及c
 
 - Tg机器人Token
 - Tg机器人ChatId
-- Tg机器人周期运行时间，可使用用crontab语法  
+- Tg机器人周期运行时间，可使用crontab语法  
 
 参考语法：
 - 30 * * * * * //每一分的第30s进行通知
