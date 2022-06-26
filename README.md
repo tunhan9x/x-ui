@@ -160,7 +160,11 @@ Command内容：
 2.请确保输入的域名为一级域名，不要带www  
 3.请勿重复申请，卸载面板本身不会卸载掉证书  
 ## 安装新面板后登录失效，设置按钮为灰  
-1.请清除cookie与浏览器缓存后进行使用
+1.请清除cookie与浏览器缓存后进行使用  
+# Telegram
+[CoderfanBaby](https://t.me/CoderfanBaby)  
+[FranzKafka‘sPrivateGroup](https://t.me/franzkafayu)
+
 
 ## Stargazers over time
 
