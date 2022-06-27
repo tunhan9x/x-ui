@@ -3,7 +3,6 @@ package service
 import (
 	"fmt"
 	"log"
-	"net"
 	"os"
 	"runtime"
 	"strconv"
@@ -54,28 +53,7 @@ func (s *TelegramService) GetsystemStatus() string {
 	status += fmt.Sprintf("xray版本:%s\r\n", s.xrayService.GetXrayVersion())
 	//ip address
 	var ip string
-	netInterfaces, err := net.Interfaces()
-	if err != nil {
-		fmt.Println("net.Interfaces failed, err:", err.Error())
-	}
-
-	for i := 0; i < len(netInterfaces); i++ {
-		if (netInterfaces[i].Flags & net.FlagUp) != 0 {
-			addrs, _ := netInterfaces[i].Addrs()
-
-			for _, address := range addrs {
-				if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
-					if ipnet.IP.To4() != nil {
-						ip = ipnet.IP.String()
-						break
-					} else {
-						ip = ipnet.IP.String()
-						break
-					}
-				}
-			}
-		}
-	}
+	ip = common.GetMyIpAddr()
 	status += fmt.Sprintf("IP地址:%s\r\n \r\n", ip)
 	//get traffic
 	inbouds, err := s.inboundService.GetAllInbounds()
