@@ -121,6 +121,7 @@ func (s *TelegramService) StartRun() {
 			inboundPortValue, err := strconv.Atoi(inboundPortStr)
 			if err != nil {
 				msg.Text = "Invalid inbound port,please check it"
+				break
 			}
 			//logger.Infof("Will delete port:%d inbound", inboundPortValue)
 			error := s.inboundService.DelInboundByPort(inboundPortValue)
@@ -141,6 +142,7 @@ func (s *TelegramService) StartRun() {
 			inboundPortValue, err := strconv.Atoi(inboundPortStr)
 			if err != nil {
 				msg.Text = "Invalid inbound port,please check it"
+				break
 			}
 			//logger.Infof("Will delete port:%d inbound", inboundPortValue)
 			error := s.inboundService.DisableInboundByPort(inboundPortValue)
@@ -154,6 +156,7 @@ func (s *TelegramService) StartRun() {
 			inboundPortValue, err := strconv.Atoi(inboundPortStr)
 			if err != nil {
 				msg.Text = "Invalid inbound port,please check it"
+				break
 			}
 			//logger.Infof("Will delete port:%d inbound", inboundPortValue)
 			error := s.inboundService.EnableInboundByPort(inboundPortValue)
@@ -161,6 +164,27 @@ func (s *TelegramService) StartRun() {
 				msg.Text = fmt.Sprintf("enable inbound whoes port is %d failed,err:%s", inboundPortValue, error)
 			} else {
 				msg.Text = fmt.Sprintf("enable inbound whoes port is %d success", inboundPortValue)
+			}
+		case "clear":
+			inboundPortStr := update.Message.CommandArguments()
+			inboundPortValue, err := strconv.Atoi(inboundPortStr)
+			if err != nil {
+				msg.Text = "Invalid inbound port,please check it"
+				break
+			}
+			error := s.inboundService.ClearTrafficByPort(inboundPortValue)
+			if error != nil {
+				msg.Text = fmt.Sprintf("Clear Traffic whose port is %d failed,err:%s", inboundPortValue, error)
+			} else {
+				msg.Text = fmt.Sprintf("Clear Traffic whose port is %d success", inboundPortValue)
+			}
+
+		case "clearall":
+			error := s.inboundService.ClearAllInboundTraffic()
+			if error != nil {
+				msg.Text = fmt.Sprintf("Clear All inbound Traffic failed,err:%s", error)
+			} else {
+				msg.Text = fmt.Sprintf("Clear All inbound Traffic success")
 			}
 		case "version":
 			versionStr := update.Message.CommandArguments()
@@ -183,6 +207,8 @@ func (s *TelegramService) StartRun() {
 /status will get current system info
 /enable will enable inbound according port
 /disable will disable inbound according port
+/clear will clear inbound traffic accoring port
+/clearall will cleal all inbouns traffic
 /version will change xray version to specific one
 You can input /help to see more commands`
 		}
