@@ -25,7 +25,9 @@ For some basic usages,please visit my [blog post](https://coderfan.net/how-to-us
 - support https access fot WebUI
 - support SSL cert issue by Acme
 - support telegram bot notify and control
-- more functions
+- more functions in control menu  
+
+for more detailed usages,plz see [wiki](https://github.com/FranzKafkaYu/x-ui/wiki)
 
 # installation
 Make sure your system `bash` and `curl` and `network` are ready,here we go

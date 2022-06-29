@@ -15,8 +15,9 @@
 - 支持 https 访问面板（自备域名 + ssl 证书）
 - 支持一键SSL证书申请且自动续签
 - Telegram bot通知、控制功能
-- 更多高级配置项，详见面板
+- 更多高级配置项，详见面板 
 
+具体使用、配置细节可参考[wiki](https://github.com/FranzKafkaYu/x-ui/wiki)
 # 安装
 在安装前请确保你的系统支持`bash`和`curl`,且系统网络正常  
 
