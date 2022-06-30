@@ -1,5 +1,5 @@
 # x-ui
-[中文](./README.md)| English  
+[CN](./README.md)| EN  
 X-UI is a webUI pannel based on Xray-core which supports multi protocols and multi users  
 This project is a fork of [vaxilu&#39;s project](https://github.com/vaxilu/x-ui),and it is a experiental project which used by myself for learning golang  
 For some basic usages,please visit my [blog post](https://coderfan.net/how-to-use-x-ui-pannel-to-set-up-proxies-for-bypassing-gfw.html)
@@ -27,7 +27,7 @@ For some basic usages,please visit my [blog post](https://coderfan.net/how-to-us
 - support telegram bot notify and control
 - more functions in control menu  
 
-for more detailed usages,plz see [wiki](https://github.com/FranzKafkaYu/x-ui/wiki)
+for more detailed usages,plz see [WIKI](https://github.com/FranzKafkaYu/x-ui/wiki)
 
 # installation
 Make sure your system `bash` and `curl` and `network` are ready,here we go
@@ -36,7 +36,7 @@ Make sure your system `bash` and `curl` and `network` are ready,here we go
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ```
 
-If your system is too old and you got this error：GLIBC_2.28 not found，please use the specific version -- 0.3.3.9
+If your system is too old and you got this error：`GLIBC_2.28 not found`，please use the specific version -- 0.3.3.9
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh) 0.3.3.9  
