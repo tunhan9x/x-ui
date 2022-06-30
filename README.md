@@ -1,5 +1,5 @@
 # x-ui
-中文|[English](./README_EN.md)  
+CN|[EN](./README_EN.md)  
 支持多协议多用户的 xray 面板   
 具体使用教程可以参考个人博客文章[链接](https://coderfan.net/how-to-use-x-ui-pannel-to-set-up-proxies-for-bypassing-gfw.html)  
 欢迎大家使用并反馈意见或提交Pr,帮助项目更好的改善~
@@ -17,7 +17,7 @@
 - Telegram bot通知、控制功能
 - 更多高级配置项，详见面板 
 
-具体使用、配置细节可参考[wiki](https://github.com/FranzKafkaYu/x-ui/wiki)
+具体使用、配置细节可参考[WIKI](https://github.com/FranzKafkaYu/x-ui/wiki)
 # 安装
 在安装前请确保你的系统支持`bash`和`curl`,且系统网络正常  
 
@@ -25,7 +25,7 @@
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ```
 
-如果你的系统版本比较老旧，安装后报错：GLIBC_2.28 not found，请使用如下命令安装0.3.3.9版本
+如果你的系统版本比较老旧，安装后报错：`GLIBC_2.28 not found`，请使用如下命令安装0.3.3.9版本
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh) 0.3.3.9  
