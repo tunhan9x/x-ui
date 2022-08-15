@@ -1,4 +1,4 @@
-name: ci
+name: x-ui-ci
 
 on:
   push:
