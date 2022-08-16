@@ -15,7 +15,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -38,7 +38,6 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: |
-            linux/386
             linux/amd64
             linux/arm64
           push: true
