@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 0*
+  workflow_dispatch:
 
 env:
   APP_NAME: x-ui
