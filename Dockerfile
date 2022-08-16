@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends -y ca-certifica
 WORKDIR /root
 COPY --from=builder  /root/main /root/x-ui
 run apt-get update && apt-get install wget -y
+run apt install unzip
 RUN wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-arm64-v8a.zip
 RUN unzip Xray-linux-arm64-v8a.zip
 RUN rm -f Xray-linux-arm64-v8a.zip geoip.dat geosite.dat
