@@ -20,6 +20,11 @@ run mv xray xray-linux-arm64
 RUN mv xray-linux-arm64 /root/bin
 RUN mv geoip.dat /root/bin
 RUN mv geosite.dat /root/bin
+RUN wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+RUN unzip Xray-linux-64.zip
+RUN rm -f Xray-linux-64.zip geoip.dat geosite.dat
+RUN mv xray xray-linux-amd64
+RUN mv xray-linux-amd64 /root/bin
 #COPY bin/. /root/bin/.
 VOLUME [ "/etc/x-ui" ]
 CMD [ "./x-ui" ]
