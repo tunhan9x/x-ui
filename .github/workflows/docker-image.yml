@@ -3,7 +3,7 @@ name: x-ui-ci
 on:
   push:
     tags:
-      - v*
+      - 0*
 
 env:
   APP_NAME: x-ui
