@@ -18,6 +18,7 @@ The Translated-to-English VErsion of [vaxilu's x-ui project;](https://github.com
 # Preview
 
 ![](media/Capture.PNG)
+![](media/Capture2.PNG)
 
 # Single Command Install & upgrade
 
