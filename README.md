@@ -15,7 +15,11 @@ The Translated-to-English VErsion of [vaxilu's x-ui project;](https://github.com
 - Support one-click SSL certificate application and automatic renewal
 - For more advanced configuration items, see the panel for details
 
-# install & upgrade
+# Preview
+
+![](media/Capture.PNG)
+
+# Single Command Install & upgrade
 
 ````
 bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/master/install.sh)
