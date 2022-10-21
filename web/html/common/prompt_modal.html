@@ -1,12 +1,9 @@
 {{define "promptModal"}}
-<a-modal id="prompt-modal" v-model="promptModal.visible" :title="promptModal.title"
-         :closable="true" @ok="promptModal.ok" :mask-closable="false"
-         :ok-text="promptModal.okText" cancel-text="取消">
-    <a-input id="prompt-modal-input" :type="promptModal.type"
-             v-model="promptModal.value"
-             :autosize="{minRows: 10, maxRows: 20}"
-             @keydown.enter.native="promptModal.keyEnter"
-             @keydown.ctrl.83="promptModal.ctrlS"></a-input>
+<a-modal id="prompt-modal" v-model="promptModal.visible" :title="promptModal.title" :closable="true"
+    @ok="promptModal.ok" :mask-closable="false" :ok-text="promptModal.okText" cancel-text="Cancel">
+    <a-input id="prompt-modal-input" :type="promptModal.type" v-model="promptModal.value"
+        :autosize="{minRows: 10, maxRows: 20}" @keydown.enter.native="promptModal.keyEnter"
+        @keydown.ctrl.83="promptModal.ctrlS"></a-input>
 </a-modal>
 
 <script>
@@ -15,7 +12,7 @@
         title: '',
         type: '',
         value: '',
-        okText: '确定',
+        okText: 'OK',
         visible: false,
         keyEnter(e) {
             if (this.type !== 'textarea') {
@@ -33,14 +30,14 @@
             promptModal.close();
             promptModal.confirm(promptModal.value);
         },
-        confirm() {},
+        confirm() { },
         open({
-                title='',
-                type='text',
-                value='',
-                okText='确定',
-                confirm=() => {},
-            }) {
+            title = '',
+            type = 'text',
+            value = '',
+            okText = 'OK',
+            confirm = () => { },
+        }) {
             this.title = title;
             this.type = type;
             this.value = value;
