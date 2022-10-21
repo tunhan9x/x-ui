@@ -99,7 +99,7 @@ Precautions:
 - The certificates applied for by this script are all generic domain name certificates
 
 
-## suggestion system
+## Suggested OSs
 
 - CentOS 7+
 - Ubuntu 16+
