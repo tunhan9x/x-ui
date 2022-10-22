@@ -4,7 +4,7 @@ The Translated-to-English Version of [Yu FranzKafka's x-ui](https://github.com/v
 
 # Features
 
-- Everything is in English (Serverside setup + web UI)
+- Everything is in English (Serverside setup + Serverside UI + Web UI)
 - System status monitoring
 - Support multi-user multi-protocol, web page visualization operation
 - Supported protocols: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
