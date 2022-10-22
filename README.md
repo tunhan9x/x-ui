@@ -81,16 +81,19 @@ docker build -t x-ui .
 
 The script has a built-in SSL certificate application function. To use this script to apply for a certificate, the following conditions must be met:
 
-- Know the Cloudflare registered email address
-- Know the Cloudflare Global API Key
-- The domain name has been resolved to the current server through cloudflare
+- Knowing the Cloudflare registered email address
+- Knowing the Cloudflare Global API Key
+- Having domain name has been resolved to the current server through cloudflare
 
 How to get the Cloudflare Global API Key:
-    ![](media/bda84fbc2ede834deaba1c173a932223.png)
-    ![](media/d13ffd6a73f938d1037d0708e31433bf.png)
+1. Visit the link https://dash.cloudflare.com/profile/api-tokens
+2. Click on View Global API Key (See the screenshot below)
+        ![](media/APIKey1.PNG)
+3. You may have to re-authenticate your account. After that, the API Key will be shown (See the screenshot below)\
+        ![](media/APIKey2.png)
 
 When using, just enter `domain name`, `email`, `API KEY`, the diagram is as follows:
-        ![](media/2022-04-04_141259.png)
+        ![](media/DetailEnter.png)
 
 Precautions:
 
