@@ -29,13 +29,13 @@ bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/ma
 
 ## Manual install & upgrade
 
-1. First download the latest compressed package from https://github.com/NidukaAkalanka/x-ui-english/releases/latest, generally choose `amd64` architecture
-2. Then upload the compressed package to the `/root/` directory of the server, and use the `root` user to log in to the server
+1. First update your system
+1. Then download the latest compressed package from https://github.com/NidukaAkalanka/x-ui-english/releases/latest, generally choose `amd64` architecture
+2. Upload the compressed package to the `/root/` directory of the server, and use the `root` user to log in to the server and run following commands
 
 > If your server cpu architecture is not `amd64`, replace `amd64` in the command with another architecture
 
 ````
-apt update -y && apt upgrade -y
 cd
 rm x-ui/ /usr/local/x-ui/ /usr/bin/x-ui -rf
 tar zxvf x-ui-linux-amd64.tar.gz
