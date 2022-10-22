@@ -151,12 +151,12 @@ install_x-ui() {
     systemctl daemon-reload
     systemctl enable x-ui
     systemctl start x-ui
-    echo "------------------------------------------"
+    echo "-------------------------------------------------"
     echo -e "${green}\\  //  ||   || ||${plain}"
     echo -e "${green} \\//   ||   || ||${plain}"
     echo -e "${green} //\\   ||___|| ||${plain}"
     echo -e "${green}//  \\  |_____| ||${plain}"
-    echo "------------------------------------------"
+    echo "-------------------------------------------------"
     echo -e "${green}x-ui v${last_version}${plain}The installation is complete, the panel has been started"
     echo -e ""
     echo -e "x-ui Management script usage: "
@@ -180,7 +180,7 @@ install_x-ui() {
     echo -e "LuckyHunter       - https://github.com/Chasing66"
     echo -e "Yu FranzKafka     - https://github.com/FranzKafkaYu"
     echo -e "Niduka Akalanka   - https://github.com/NidukaAkalanka"
-
+    echo -e "----------------------------------------------"
 }
 
 echo -e "${green}start installation${plain}"
