@@ -1,6 +1,6 @@
 # X-UI ENGLISH VERSION
 
-The Translated-to-English Version of [vaxilu's x-ui project;](https://github.com/vaxilu/x-ui) whixh is a Multi-protocol Multi-user Xray Panel
+The Translated-to-English Version of [Yu FranzKafka's x-ui](https://github.com/vaxilu/x-ui), forked from [vaxilu's awesome repo](https://github.com/vaxilu/x-ui/) which is a Multi-protocol Multi-user Xray Panel
 
 # Features
 
