@@ -8,6 +8,9 @@
     <a-form-item label="密码">
         <a-input v-model.trim="inbound.settings.password"></a-input>
     </a-form-item>
+    <a-form-item label="邮箱">
+        <a-input v-model.trim="inbound.settings.email"></a-input>
+    </a-form-item>
     <a-form-item label="网络">
         <a-select v-model="inbound.settings.network" style="width: 100px;">
             <a-select-option value="tcp,udp">tcp+udp</a-select-option>

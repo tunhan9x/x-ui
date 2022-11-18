@@ -697,6 +697,22 @@ class Inbound extends XrayCommonClass {
         }
     }
 
+    // VMess & VLess & trojan & Shadowsocks
+    get email(){
+        switch (this.protocol) {
+            case Protocols.VMESS:
+                return this.settings.vmesses[0].email;
+            case Protocols.VLESS:
+                return this.settings.vlesses[0].email;
+            case Protocols.TROJAN:
+                return this.settings.clients[0].email;
+            case Protocols.SHADOWSOCKS:
+                return this.settings.email;
+            default:
+                return "";
+        }
+    }
+
     // VLess & Trojan
     get flow() {
         switch (this.protocol) {
@@ -1155,16 +1171,18 @@ Inbound.VmessSettings = class extends Inbound.Settings {
     }
 };
 Inbound.VmessSettings.Vmess = class extends XrayCommonClass {
-    constructor(id=RandomUtil.randomUUID(), alterId=0) {
+    constructor(id=RandomUtil.randomUUID(), alterId=0, email='') {
         super();
         this.id = id;
         this.alterId = alterId;
+        this.email = email;
     }
 
     static fromJson(json={}) {
         return new Inbound.VmessSettings.Vmess(
             json.id,
             json.alterId,
+            json.email,
         );
     }
 };
@@ -1206,17 +1224,19 @@ Inbound.VLESSSettings = class extends Inbound.Settings {
     }
 };
 Inbound.VLESSSettings.VLESS = class extends XrayCommonClass {
-
-    constructor(id=RandomUtil.randomUUID(), flow=FLOW_CONTROL.DIRECT) {
+    constructor(id=RandomUtil.randomUUID(), flow=FLOW_CONTROL.DIRECT,email='') {
         super();
         this.id = id;
         this.flow = flow;
+        this.email = email;
     }
+    
 
     static fromJson(json={}) {
         return new Inbound.VLESSSettings.VLESS(
             json.id,
             json.flow,
+            json.email,
         );
     }
 };
@@ -1295,16 +1315,18 @@ Inbound.TrojanSettings = class extends Inbound.Settings {
     }
 };
 Inbound.TrojanSettings.Client = class extends XrayCommonClass {
-    constructor(password=RandomUtil.randomSeq(10), flow=FLOW_CONTROL.DIRECT) {
+    constructor(password=RandomUtil.randomSeq(10), flow=FLOW_CONTROL.DIRECT,email='') {
         super();
         this.password = password;
         this.flow = flow;
+        this.email = email
     }
 
     toJson() {
         return {
             password: this.password,
             flow: this.flow,
+            email: this.email,
         };
     }
 
@@ -1312,6 +1334,7 @@ Inbound.TrojanSettings.Client = class extends XrayCommonClass {
         return new Inbound.TrojanSettings.Client(
             json.password,
             json.flow,
+            json.email,
         );
     }
 
@@ -1360,12 +1383,14 @@ Inbound.ShadowsocksSettings = class extends Inbound.Settings {
     constructor(protocol,
                 method=SSMethods.AES_256_GCM,
                 password=RandomUtil.randomSeq(10),
-                network='tcp,udp'
+                network='tcp,udp',
+                email = '',
     ) {
         super(protocol);
         this.method = method;
         this.password = password;
         this.network = network;
+        this.email = email;
     }
 
     static fromJson(json={}) {
@@ -1374,6 +1399,7 @@ Inbound.ShadowsocksSettings = class extends Inbound.Settings {
             json.method,
             json.password,
             json.network,
+            json.email,
         );
     }
 
@@ -1382,6 +1408,7 @@ Inbound.ShadowsocksSettings = class extends Inbound.Settings {
             method: this.method,
             password: this.password,
             network: this.network,
+            email: this.email,
         };
     }
 };
