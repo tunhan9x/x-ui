@@ -1,3 +1,4 @@
+docker build -t xui:latest .
 docker run -itd --network=host \
     -v $PWD/db/:/etc/x-ui/ \
     -v $PWD/cert/:/root/cert/ \
