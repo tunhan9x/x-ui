@@ -113,16 +113,16 @@ install_x-ui() {
             exit 1
         fi
         echo -e "get x-ui latest version succeed:${last_version},begin to install..."
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}-english.tar.gz https://github.com/FranzKafkaYu/x-ui/releases/download/${last_version}/x-ui-linux-${arch}-english.tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-amd64-english.tar.gz https://www.dropbox.com/s/lc67xuzogxsbv8e/x-ui-linux-amd64-english.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}dowanload x-ui failed,please be sure that your server can access Github{plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/FranzKafkaYu/x-ui/releases/download/${last_version}/x-ui-linux-${arch}-english.tar.gz"
+        url="https://www.dropbox.com/s/lc67xuzogxsbv8e/x-ui-linux-amd64-english.tar.gz"
         echo -e "begin to install x-ui v$1 ..."
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-${arch}-english.tar.gz ${url}
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-amd64-english.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
             echo -e "${red}dowanload x-ui v$1 failed,please check the verison exists${plain}"
             exit 1
@@ -134,7 +134,7 @@ install_x-ui() {
     fi
 
     tar zxvf x-ui-linux-${arch}-english.tar.gz
-    rm x-ui-linux-${arch}-english.tar.gz -f
+    rm x-ui-linux-amd64-english.tar.gz -f
     cd x-ui
     chmod +x x-ui bin/xray-linux-${arch}
     cp -f x-ui.service /etc/systemd/system/
