@@ -94,7 +94,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install_en.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/LiLGun-X/x-ui/patch-2/install_th.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -113,7 +113,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install_en.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/LiLGun-X/x-ui/patch-2/install_th.sh)
     if [[ $? == 0 ]]; then
         LOGI "upgrade finished,restart completed"
         exit 0
@@ -621,7 +621,7 @@ ssl_cert_issue_by_cloudflare() {
 }
 
 show_usage() {
-    echo "x-ui control menu usages: "
+    echo "x-ui control menu usages TESTX: "
     echo "------------------------------------------"
     echo -e "x-ui              - Enter control menu"
     echo -e "x-ui start        - Start x-ui "
@@ -639,7 +639,7 @@ show_usage() {
 
 show_menu() {
     echo -e "
-  ${green}x-ui control menu${plain}
+  ${green}x-ui control menu TESTX${plain}
   ${green}0.${plain} exit
 ————————————————
   ${green}1.${plain} install   x-ui
