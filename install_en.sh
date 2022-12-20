@@ -147,7 +147,7 @@ install_x-ui() {
     systemctl start x-ui
     echo -e "${green}x-ui v${last_version}${plain} install finished,it is working now..."
     echo -e ""
-    echo -e "x-ui control menu usages: "
+    echo -e "x-ui control menu usages TESTX: "
     echo -e "----------------------------------------------"
     echo -e "x-ui              - Enter     control menu"
     echo -e "x-ui start        - Start     x-ui "
