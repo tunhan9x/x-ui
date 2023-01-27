@@ -554,6 +554,7 @@ ssl_cert_issue_by_cloudflare() {
     LOGI "4.该脚本申请证书默认安装路径为/root/cert目录"
     confirm "我已确认以上内容[y/n]" "y"
     if [ $? -eq 0 ]; then
+		cd ~
         install_acme
         if [ $? -ne 0 ]; then
             LOGE "无法安装acme,请检查错误日志"
