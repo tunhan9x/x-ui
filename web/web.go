@@ -20,7 +20,6 @@ import (
 	"x-ui/web/job"
 	"x-ui/web/network"
 	"x-ui/web/service"
-
 	"github.com/BurntSushi/toml"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"

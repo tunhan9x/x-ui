@@ -37,7 +37,6 @@ type AllSetting struct {
 	TgBotChatId        int    `json:"tgBotChatId" form:"tgBotChatId"`
 	TgRunTime          string `json:"tgRunTime" form:"tgRunTime"`
 	XrayTemplateConfig string `json:"xrayTemplateConfig" form:"xrayTemplateConfig"`
-
 	TimeLocation string `json:"timeLocation" form:"timeLocation"`
 }
 

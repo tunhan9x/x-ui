@@ -168,7 +168,6 @@ class AllSetting {
         this.tgBotChatId = 0;
         this.tgRunTime = "";
         this.xrayTemplateConfig = "";
-
         this.timeLocation = "Asia/Shanghai";
 
         if (data == null) {
