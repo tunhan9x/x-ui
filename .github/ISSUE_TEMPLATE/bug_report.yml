@@ -7,21 +7,21 @@ body:
       label: Welcome
       options:
         - label: Yes, I'm using the latest major release. Only such installations are supported.
-          required: true
+          required: false
         - label: Yes, I'm using the supported system. Only such systems are supported.
-          required: true
+          required: false
         - label: Yes, I have read all WIKI document,nothing can help me in my problem.
-          required: true
+          required: false
         - label: Yes, I've searched similar issues on GitHub and didn't find any.
-          required: true
+          required: false
         - label: Yes, I've included all information below (version, config, log, etc).
-          required: true
+          required: false
 
   - type: textarea
     id: problem
     attributes:
       label: Description of the problem,screencshot would be good 
-      placeholder: Your problem description
+      placeholder: Telegram Bot timeout would prevent you from login to panel
     validations:
       required: true
 
@@ -34,7 +34,7 @@ body:
 
         ```console
         $ x-ui version
-        # Paste output here
+        # 0.3.2
         ```
 
         </details>
@@ -49,7 +49,7 @@ body:
         <details>
 
         ```console
-        # paste log here
+        # get tgbot error: Post "https://api.telegram.org/bot/getMe": dial tcp 10.10.34.36:443: i/o timeout
         ```
 
         </details>
