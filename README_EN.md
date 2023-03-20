@@ -1,3 +1,5 @@
+Fork X-UI repo, from FranzFafkaYu
+
 # X-UI
 
 [简体中文](./README.md)| ENGLISH  
