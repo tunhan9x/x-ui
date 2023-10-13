@@ -67,7 +67,7 @@ elif [[ x"${release}" == x"ubuntu" ]]; then
     fi
 #elif [[ x"${release}" == x"debian" ]]; then
 #    if [[ ${os_version} -lt 8 ]]; then
-#        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1      #屏蔽检测debian需要正式版本，使其可以使用与testing版本
+#        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1      #屏蔽检测debian需要正式版本，使其可以使用于testing版本，后期使用systemctl restart x-ui语法进行控制
 #    fi
 fi
 
