@@ -19,7 +19,7 @@ elif cat /etc/issue | grep -Eqi "ubuntu"; then
     release="ubuntu"
 elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
-elif cat /proc/version | grep -Eqi "debian"; then
+elif cat /proc/version | grep -Eqi "debian"; then                
     release="debian"
 elif cat /proc/version | grep -Eqi "ubuntu"; then
     release="ubuntu"
@@ -65,10 +65,10 @@ elif [[ x"${release}" == x"ubuntu" ]]; then
     if [[ ${os_version} -lt 16 ]]; then
         echo -e "${red}请使用 Ubuntu 16 或更高版本的系统！${plain}\n" && exit 1
     fi
-elif [[ x"${release}" == x"debian" ]]; then
-    if [[ ${os_version} -lt 8 ]]; then
-        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1
-    fi
+#elif [[ x"${release}" == x"debian" ]]; then
+#    if [[ ${os_version} -lt 8 ]]; then
+#        echo -e "${red}请使用 Debian 8 或更高版本的系统！${plain}\n" && exit 1      #屏蔽检测debian需要正式版本，使其可以使用与testing版本
+#    fi
 fi
 
 install_base() {
