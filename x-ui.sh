@@ -568,7 +568,7 @@ ssl_cert_issue_by_cloudflare() {
         read -p "Input your domain here:" CF_Domain
         LOGD "你的域名设置为:${CF_Domain},正在进行域名合法性校验..."
         #here we need to judge whether there exists cert already
-        local currentCert=$(~/.acme.sh/acme.sh --list | grep ${CF_Domain} | wc -l)
+        local currentCert=$(~/.acme.sh/acme.sh --list | grep -e ^${CF_Domain} | wc -l)
         if [ ${currentCert} -ne 0 ]; then
             local certInfo=$(~/.acme.sh/acme.sh --list)
             LOGE "域名合法性校验失败,当前环境已有对应域名证书,不可重复申请,当前证书详情:"
