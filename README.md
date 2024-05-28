@@ -1,5 +1,78 @@
+ENGLISH
+# Installation
+Make sure your system `bash` and `curl` and `network` are ready,here we go
+
+```
+bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+```  
+For English Users,please use the following command to install English supported version:  
+```
+bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install_en.sh)
+``` 
+
+## Shortcut  
+After Installation，you can input `x-ui`to enter control menu，current menu details：
+```
+ 
+  x-ui control menu
+  0. exit
+————————————————
+  1. install   x-ui
+  2. update    x-ui
+  3. uninstall x-ui
+————————————————
+  4. reset username
+  5. reset panel
+  6. reset panel port
+  7. check panel info
+————————————————
+  8. start x-ui
+  9. stop  x-ui
+  10. restart x-ui
+  11. check x-ui status
+  12. check x-ui logs
+————————————————
+  13. enable  x-ui on sysyem startup
+  14. disabel x-ui on sysyem startup
+————————————————
+  15. enable bbr 
+  16. issuse certs
+ 
+x-ui status: running
+enable on system startup: yes
+xray status: running
+
+please input a legal number[0-16]: 
+```
+
+# System requirements:  
+## MEM  
+- 128MB minimal/256MB+ recommend  
+## OS
+- CentOS 7+
+- Ubuntu 16+
+- Debian 8+
+
+# Telegram
+
+[Channel](https://t.me/CoderfanBaby)  
+[Group](https://t.me/franzkafayu)
+
+# Credits
+- [vaxilu/x-ui](https://github.com/vaxilu/x-ui)
+- [XTLS/Xray-core](https://github.com/XTLS/Xray-core)
+- [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api)  
+
+# Sponsor  
+
+if you want to purchase some virtual servers,you can purchase by my aff link:   
+- [BandwagonHost](https://bandwagonhost.com/aff.php?aff=65703)     
+- [Cloudcone](https://app.cloudcone.com/?ref=7536)  
+- [SpartanHost](https://billing.spartanhost.net/aff.php?aff=1875)  
+
+
 # X-UI
-简体中文|[ENGLISH](./README_EN.md)  
+简体中文
 
 > 声明：该项目仅供个人学习、交流，请遵守当地法律法规,勿用于非法用途;请勿用于生产环境  
 > 声明：该项目已闭源，介意者请勿使用；如您需要开源代码，请附上您的Github Profile邮箱联系  
