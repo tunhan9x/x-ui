@@ -1,4 +1,4 @@
-ENGLISH
+# X-UI | ENGLISH
 # Installation
 Make sure your system `bash` and `curl` and `network` are ready,here we go
 
@@ -62,13 +62,6 @@ please input a legal number[0-16]:
 - [vaxilu/x-ui](https://github.com/vaxilu/x-ui)
 - [XTLS/Xray-core](https://github.com/XTLS/Xray-core)
 - [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api)  
-
-# Sponsor  
-
-if you want to purchase some virtual servers,you can purchase by my aff link:   
-- [BandwagonHost](https://bandwagonhost.com/aff.php?aff=65703)     
-- [Cloudcone](https://app.cloudcone.com/?ref=7536)  
-- [SpartanHost](https://billing.spartanhost.net/aff.php?aff=1875)  
 
 
 # X-UI
